@@ -1,0 +1,14 @@
+<div>
+    <input type="number" [(ngModel)]="start_time" placeholder="Start Time" min="0" max="23" />
+    <input type="number" [(ngModel)]="end_time" placeholder="End Time" min="1" max="24" />
+    <button (click)="addEvent()">Add Event</button>
+  </div>
+  <div>
+    <h3>Scheduled Events</h3>
+    <ul>
+      <li *ngFor="let event of events">
+        Start: {{ event.start_time }} - End: {{ event.end_time }}
+      </li>
+    </ul>
+  </div>
+  
